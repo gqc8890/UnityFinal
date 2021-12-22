@@ -34,8 +34,8 @@ public class ButtonLogic : MonoBehaviour
             Invoke("opendelay", 0.3f);
         }else{
             m_audio.PlayOneShot(openaudio);
-            Invoke("closedelay", 0.3f);
-            door.SetActive(true);
+            Invoke("closedelay", 0.5f);
+            //door.SetActive(true);
         }
     }
 

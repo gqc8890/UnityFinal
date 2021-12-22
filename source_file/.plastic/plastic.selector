@@ -1,0 +1,4 @@
+repository "Assignment_3@ssl://zengzy_1226@sh03-plasticscm.unity.cn:8787"
+  path "/"
+    smartbranch "/main/adonis1147172798" 
+     

@@ -1,0 +1,23 @@
+﻿<Localization>
+  <Entry>
+    <Key>Title</Key>
+    <Value>Horrible Hotel</Value>
+  </Entry>
+  <Entry>
+    <Key>Start</Key>
+    <Value>Start</Value>
+  </Entry>
+  <Entry>
+    <Key>Options</Key>
+    <Value>Options</Value>
+  </Entry>
+  <Entry>
+    <Key>Quit</Key>
+    <Value>Quit</Value>
+  </Entry>
+  <Entry>
+    <Key>MainMenu</Key>
+    <Value>MainMenu</Value>
+  </Entry>
+  
+</Localization>

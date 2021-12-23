@@ -47,7 +47,12 @@ public class Check2 : MonoBehaviour
                 triggers[i].lighton();
             }
             m_audio.playopendoor();
-            gameObject.SetActive(false);
+            destroy_door();
         }
+    }
+
+    void destroy_door()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -5,7 +5,7 @@ Plan to finish by 12-27
 
 Thank you for your kind support if you are interested in this project~
 
-
+test
 
 # Unity_Final
 Unity Final Group Project
@@ -16,13 +16,15 @@ TODO:
 
 	1.我感觉现在level里的东西（装饰品）有点少，等过几天我找个大家都不做的时间，我好好加点东西2333 (曾子尧)
 	
-	2.加入存档系统，在走廊中间存，存电池状态，身上电池数+电量
+	2.加入存档系统，在走廊中间存，存电池状态，身上电池数+电量 (高启城，done)
 	
 	4.主菜单加入可以看控制的control
 	
 	5.死了选择可以读档或者返回主菜单
 
 	6.把所有文本都load到XML去
+
+	7.难度调整
 	
 
 Done:
@@ -64,6 +66,11 @@ Done:
 	2021.12.23 修改了走廊灯和墙壁的穿模，尝试解决第一个解密点门的升起和声音不同步的问题但是没完全fix(要去上课了2333) (曾子尧)
 
 	2021.12.23 完成了游戏内菜单，ESC呼出，目前可以退出到主菜单+返回游戏，load等checkpoint system做完了再实现 (曾子尧)
+<<<<<<< HEAD
+=======
+	
+	2021.12.24 加入存档读档功能（KL键）；加入走廊存档点；加入加载界面脚本.（高启城）
+>>>>>>> e5e1a2531424588bd8fcbcb2bff2c9f99298caae
  
 
 

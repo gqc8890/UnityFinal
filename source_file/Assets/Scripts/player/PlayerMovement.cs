@@ -98,4 +98,35 @@ public class PlayerMovement : MonoBehaviour
         Quaternion lookback_rotation = Quaternion.Euler(0.0f, -90.0f, 0.0f);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, lookback_rotation, Time.deltaTime * 800.0f);
     }
+
+    public void Save()
+    {
+        PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
+        PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
+        PlayerPrefs.SetFloat("PlayerPosZ", transform.position.z);
+        Debug.Log("fuck");
+        PlayerPrefs.SetFloat("PlayerRotX", transform.rotation.eulerAngles.x);
+        PlayerPrefs.SetFloat("PlayerRotY", transform.rotation.eulerAngles.y);
+        PlayerPrefs.SetFloat("PlayerRotZ", transform.rotation.eulerAngles.z);
+
+    }
+
+    public void Load()
+    {
+        float playerPosX = PlayerPrefs.GetFloat("PlayerPosX");
+        float playerPosY = PlayerPrefs.GetFloat("PlayerPosY");
+        float playerPosZ = PlayerPrefs.GetFloat("PlayerPosZ");
+
+        float playerRotX = PlayerPrefs.GetFloat("PlayerRotX");
+        float playerRotY = PlayerPrefs.GetFloat("PlayerRotY");
+        float playerRotZ = PlayerPrefs.GetFloat("PlayerRotZ");
+
+
+        //GetComponent<CharacterController>().enabled = false;
+
+        transform.position = new Vector3(playerPosX, playerPosY, playerPosZ);
+        transform.rotation = Quaternion.Euler(playerRotX, playerRotY, playerRotZ);
+
+        //GetComponent<CharacterController>().enabled = true;
+    }
 }

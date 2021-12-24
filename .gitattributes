@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 source_file/* filter=lfs diff=lfs merge=lfs -text
 source_file/Assets/Font/* filter=lfs diff=lfs merge=lfs -text
+=======
+source_file/* filter=lfs diff=lfs merge=lfs -text
+source_file/Assets/Font/* filter=lfs diff=lfs merge=lfs -text
+>>>>>>> e5e1a2531424588bd8fcbcb2bff2c9f99298caae

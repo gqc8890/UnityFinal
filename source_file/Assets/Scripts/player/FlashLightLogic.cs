@@ -62,5 +62,24 @@ public class FlashLightLogic : MonoBehaviour
     void UpdateElectricUI()
     {
         m_electricTMP.text = " "+(int)((m_light.intensity/2f)*100);
+<<<<<<< HEAD
+=======
+    }
+
+    public void Save()
+    {
+        PlayerPrefs.SetFloat("Electric", m_light.intensity);
+        PlayerPrefs.SetInt("Battery", battery_num);
+
+
+    }
+
+    public void Load()
+    {
+        m_light.intensity = PlayerPrefs.GetFloat("Electric");
+        battery_num = PlayerPrefs.GetInt("Battery");
+        UpdateBatteryUI();
+        UpdateElectricUI();
+>>>>>>> e5e1a2531424588bd8fcbcb2bff2c9f99298caae
     }
 }

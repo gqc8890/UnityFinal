@@ -6,13 +6,18 @@ public class DoorDownTrigger : MonoBehaviour
 {
     [SerializeField]
     GameObject m_door;
+    [SerializeField]
+    AudioClip shut;
 
     Vector3 copy_trans;
     bool setdoordown = false;
+    AudioSource m_audio;
+    bool startplay = false;
     // Start is called before the first frame update
     void Start()
     {
         copy_trans = m_door.transform.position;
+        m_audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,7 +25,13 @@ public class DoorDownTrigger : MonoBehaviour
     {
         if (setdoordown)
         {
-            m_door.transform.position = Vector3.MoveTowards(m_door.transform.position, copy_trans + new Vector3(0.0f,5.0f,0), Time.deltaTime * 5.0f);
+            if (!startplay)
+            {
+                Invoke("playshut", 0.5f);
+                startplay = true;
+            }
+                
+            m_door.transform.position = Vector3.MoveTowards(m_door.transform.position, copy_trans + new Vector3(0.0f,5.0f,0), Time.deltaTime * 8.0f);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -29,5 +40,10 @@ public class DoorDownTrigger : MonoBehaviour
         {
             setdoordown = true;
         }
+    }
+
+    void playshut()
+    {
+        m_audio.PlayOneShot(shut);
     }
 }

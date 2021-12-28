@@ -43,8 +43,9 @@ public class InGameMenu : MonoBehaviour
     public void OnQuitClicked()
     {
         Debug.Log("Clicked Quit");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("MainMenu");
-        Quit();
 
     }
 

@@ -34,7 +34,6 @@ public class THC6_ctrl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{		
-		RotateCtrl();
 		if (Input.GetKey ("1"))  // turn to still state
 		{ 		
 			anim.SetInteger ("battle", 0);
@@ -133,12 +132,6 @@ public class THC6_ctrl : MonoBehaviour {
 		controller.Move (moveDirection * Time.deltaTime);
 		}
 
-	private void RotateCtrl() {
-        Vector3 tempRot = m_camera.transform.position;
-        tempRot.y = transform.position.y;
-        Vector3 targetRot = transform.position - tempRot;
-        transform.rotation = Quaternion.LookRotation(targetRot);
-    }
 }
 
 

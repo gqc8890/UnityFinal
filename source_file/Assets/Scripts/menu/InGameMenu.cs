@@ -32,11 +32,14 @@ public class InGameMenu : MonoBehaviour
     public void OnReturnClicked()
     {
         Debug.Log("Clicked Start");
+        Time.timeScale = 1;
         Quit();
     }
 
     public void OnLoadClicked()
     {
+        Time.timeScale = 1;
+        FindObjectOfType<SaveManager>().Load1();
         Debug.Log("Clicked Load");
     }
 
@@ -45,7 +48,9 @@ public class InGameMenu : MonoBehaviour
         Debug.Log("Clicked Quit");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+        //SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
 
     }
 
@@ -53,7 +58,7 @@ public class InGameMenu : MonoBehaviour
     {
         is_stop = 0;
         ingameMenu.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
         CursorLogic.locked = true;
     }
 

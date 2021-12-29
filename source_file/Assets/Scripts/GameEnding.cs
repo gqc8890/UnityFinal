@@ -56,6 +56,8 @@ public class GameEnding : MonoBehaviour
         {
             if (doRestart)
             {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene (0);
             }
             else

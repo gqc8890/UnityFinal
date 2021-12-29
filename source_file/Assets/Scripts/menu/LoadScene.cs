@@ -26,10 +26,10 @@ public class LoadScene : MonoBehaviour
 
         progressBar.fillAmount = curProgressValue / 200f;//实时更新滑动进度图片的fillAmount值  
 
-        if (curProgressValue >= 200)
+        if (curProgressValue == 200)
         {
             loadingText.text = "OK";//文本显示完成OK
-            SceneManager.LoadScene("Level0");
+            SceneManager.LoadScene(2);
         }
     }
 }

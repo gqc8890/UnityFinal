@@ -15,7 +15,8 @@ public class MainMenuLogic : MonoBehaviour
     public void OnStartClicked()
     {
         Debug.Log("Clicked Start");
-        SceneManager.LoadScene("LoadScene");
+        //SceneManager.LoadScene("LoadScene");
+        SceneManager.LoadScene(1);
     }
 
     public void OnOptionsClicked()

@@ -8,6 +8,7 @@ public class CheckPointTrigger : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            Debug.Log("save");
             SaveManager.Instance.Save1();
 
             Destroy(gameObject);

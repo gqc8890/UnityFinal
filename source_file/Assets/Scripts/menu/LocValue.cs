@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LocValue : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class LocValue : MonoBehaviour
 
     void Start()
     {
-        Text text = GetComponent<Text>();
+        TMP_Text text = GetComponent<TMP_Text>();
         if(text && m_key != "")
         {
             text.text = LocalizationManager.Instance.GetLocalizedValue(m_key);

@@ -1,7 +1,7 @@
 ﻿<Localization>
   <Entry>
     <Key>Title</Key>
-    <Value>Horrible Hotel</Value>
+    <Value>Darkside</Value>
   </Entry>
   <Entry>
     <Key>Start</Key>
@@ -9,7 +9,7 @@
   </Entry>
   <Entry>
     <Key>Options</Key>
-    <Value>Options</Value>
+    <Value>Help</Value>
   </Entry>
   <Entry>
     <Key>Quit</Key>
@@ -19,5 +19,24 @@
     <Key>MainMenu</Key>
     <Value>MainMenu</Value>
   </Entry>
-  
+  <Entry>
+    <Key>Return</Key>
+    <Value>Return</Value>
+  </Entry>
+  <Entry>
+    <Key>Electric</Key>
+    <Value>Electric:</Value>
+  </Entry>
+  <Entry>
+    <Key>Battery</Key>
+    <Value>Battery:</Value>
+  </Entry>
+  <Entry>
+    <Key>Load</Key>
+    <Value>Load</Value>
+  </Entry>
+  <Entry>
+    <Key>Tip</Key>
+    <Value>Tip:Try directional key.</Value>
+  </Entry>
 </Localization>

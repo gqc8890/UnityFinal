@@ -1,7 +1,7 @@
 ﻿<Localization>
   <Entry>
     <Key>Title</Key>
-    <Value>恐怖酒店</Value>
+    <Value>黑暗边缘</Value>
   </Entry>
   <Entry>
     <Key>Start</Key>
@@ -18,5 +18,25 @@
   <Entry>
     <Key>MainMenu</Key>
     <Value>主菜单</Value>
+  </Entry>
+  <Entry>
+    <Key>Return</Key>
+    <Value>返回</Value>
+  </Entry>
+  <Entry>
+    <Key>Electric</Key>
+    <Value>电量:</Value>
+  </Entry>
+  <Entry>
+    <Key>Battery</Key>
+    <Value>电池数:</Value>
+  </Entry>
+  <Entry>
+    <Key>Load</Key>
+    <Value>读档</Value>
+  </Entry>
+  <Entry>
+    <Key>Tip</Key>
+    <Value>提示:试试方向键.</Value>
   </Entry>
 </Localization>

@@ -21,6 +21,7 @@ public class MainMenuLogic : MonoBehaviour
     public void OnOptionsClicked()
     {
         Debug.Log("Clicked Options");
+        SceneManager.LoadScene("Control");
     }
 
     public void OnQuitClicked()
@@ -33,4 +34,6 @@ public class MainMenuLogic : MonoBehaviour
         Debug.Log("Clicked Menu");
         SceneManager.LoadScene("MainMenu");
     }
+
+
 }

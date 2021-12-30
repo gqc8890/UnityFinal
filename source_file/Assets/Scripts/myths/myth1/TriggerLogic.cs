@@ -15,7 +15,7 @@ public class TriggerLogic : MonoBehaviour
 {
     [SerializeField]
     Light lit;
-    const float BUFFER = .3f;
+    const float BUFFER = .2f;
     [SerializeField]
     GameObject timer;
     [SerializeField]
@@ -27,8 +27,6 @@ public class TriggerLogic : MonoBehaviour
 
     public bool judge = false;
     public bool restart = false;
-    float[] TIMEFLOW = { 0.0f, 1.0f, 2.0f, 3.0f, 4.0f };
-    Dictionary<mythOrder, float> statdict = new Dictionary<mythOrder, float>();
     Timer timerlogic;
     AudioSource m_audio;
 
@@ -38,38 +36,43 @@ public class TriggerLogic : MonoBehaviour
         m_audio = GetComponent<AudioSource>();
         lit.intensity = 0.0f;
         timerlogic = timer.GetComponent<Timer>();
-        statdict.Add(mythOrder.s0, TIMEFLOW[0]);
-        statdict.Add(mythOrder.s1, TIMEFLOW[1]);
-        statdict.Add(mythOrder.s2, TIMEFLOW[2]);
-        statdict.Add(mythOrder.s3, TIMEFLOW[3]);
-        statdict.Add(mythOrder.s4, TIMEFLOW[4]);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player" && !completed)
         {
+            
             if(stat == mythOrder.s0)
+            {
                 timerlogic.begintiming = true;
+                m_audio.PlayOneShot(stataudio);
+                judge = true;
+                timerlogic.time = 0.0f;
+            }
+                
             if (timerlogic.begintiming)
             {
                 lit.intensity = 2.0f;
             }
                 
-            float upper = statdict[stat] + BUFFER;
-            float lower = statdict[stat] - BUFFER;
-            if (timerlogic.time >= lower && timerlogic.time <= upper)
+            float upper = 1.0f + BUFFER;
+            float lower = 1.0f - BUFFER;
+            if(stat != mythOrder.s0)
             {
-                judge = true;
-                m_audio.PlayOneShot(stataudio);
-            }
-            else
-            {
-                if(timerlogic.begintiming)
-                    m_audio.PlayOneShot(wrongaudio);
-                restart = true;
-                timerlogic.begintiming = false;
-                timerlogic.time = 0.0f;
+                if (timerlogic.time >= lower && timerlogic.time <= upper)
+                {
+                    judge = true;
+                    m_audio.PlayOneShot(stataudio);
+                    timerlogic.time = 0.0f;
+                }
+                else
+                {
+                    if (timerlogic.begintiming)
+                        m_audio.PlayOneShot(wrongaudio);
+                    restart = true;
+                    timerlogic.begintiming = false;
+                }
             }
         }
     }

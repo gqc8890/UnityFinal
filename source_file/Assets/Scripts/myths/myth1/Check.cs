@@ -31,7 +31,6 @@ public class Check : MonoBehaviour
             }
             if (triggers[i].restart)
             {
-                Debug.Log(i);
                 triggers[i].restart = false;
                 for(int j = 0; j < 5; j++)
                 {

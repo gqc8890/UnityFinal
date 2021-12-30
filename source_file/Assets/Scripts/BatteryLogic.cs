@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class BatteryLogic : MonoBehaviour
 {
+    [SerializeField]
+    AudioClip battery;
+
+    AudioSource m_audio;
     int batterystate=1;
 
     public void pickbattery(){
+        m_audio.clip = battery;
+        m_audio.SetScheduledStartTime(0.5f);
+        m_audio.Play();
         GetComponent<MeshRenderer>().enabled=false;
         GetComponent<Collider>().enabled=false;
         batterystate=0;
@@ -16,7 +23,7 @@ public class BatteryLogic : MonoBehaviour
     public void Save(int index)
     {
         PlayerPrefs.SetInt("BatteryState"+ index, batterystate);
-
+        m_audio = GetComponent<AudioSource>();
     }
 
     public void Load(int index)

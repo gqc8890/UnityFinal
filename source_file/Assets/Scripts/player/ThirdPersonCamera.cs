@@ -102,6 +102,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 
     float mid;
 
+
+
     Ray ray;
 
     GameObject m_flash;
@@ -110,6 +112,7 @@ public class ThirdPersonCamera : MonoBehaviour {
     void Start () {
         GetTarget(target.gameObject);
         m_flash=GameObject.Find("FlashLight");
+
     }
     
     // Update is called once per frame

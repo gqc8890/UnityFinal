@@ -88,9 +88,9 @@ public class CGtransform : MonoBehaviour
                     m_audio[1].Play();
                     startplay2 = true;
                 }
-                transform.position = Vector3.MoveTowards(transform.position, targetTrans.position, Time.deltaTime * PATROL_SPEED);
+                //transform.position = Vector3.MoveTowards(transform.position, targetTrans.position, Time.deltaTime * PATROL_SPEED);
             }
-                
+            transform.position = Vector3.MoveTowards(transform.position, targetTrans.position, Time.deltaTime * PATROL_SPEED);
         }
     }
 }

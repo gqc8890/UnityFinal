@@ -20,6 +20,7 @@ public class NewEnemy : MonoBehaviour {
 
 	public GameObject bornpoint;
 
+    DiffManageLogic diff;
 	
 	// Use this for initialization
 	void Start () 
@@ -31,7 +32,7 @@ public class NewEnemy : MonoBehaviour {
 		r_sp = runSpeed; //read run speed
 		battle_state = 0;
 		runSpeed = 1;
-
+        diff = FindObjectOfType<DiffManageLogic>();
 	}
 	
 	// Update is called once per frame
@@ -153,7 +154,25 @@ public class NewEnemy : MonoBehaviour {
 
 	void walk(){
 		anim.SetInteger ("moving", 1);
-		gameObject.GetComponent<NavMeshAgent>().speed=1;
+        float diff_speed = 0.0f;
+        switch (diff.diff_mode)
+        {
+            case "Easy":
+                diff_speed = 0.5f;
+                break;
+            case "Normal":
+                diff_speed = 0.8f;
+                break;
+            case "Hard":
+                diff_speed = 1.2f;
+                break;
+            default:
+                diff_speed = 0.8f;
+                break;
+            
+        }
+        Debug.Log(diff_speed);
+		gameObject.GetComponent<NavMeshAgent>().speed=diff_speed;
 	}
 
 	public void born(){

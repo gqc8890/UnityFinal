@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Control.unity
     guid: d9322b60630bd0b4f93fc5772137f615
+  - enabled: 1
+    path: Assets/Scenes/DiffSelect.unity
+    guid: 6594e82c948246b48aebd516a9c1116c
   m_configObjects: {}

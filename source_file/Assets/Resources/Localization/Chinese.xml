@@ -16,6 +16,18 @@
     <Value>退出游戏</Value>
   </Entry>
   <Entry>
+    <Key>Easy</Key>
+    <Value>简单</Value>
+  </Entry>
+  <Entry>
+    <Key>Normal</Key>
+    <Value>普通</Value>
+  </Entry>
+  <Entry>
+    <Key>Hard</Key>
+    <Value>困难</Value>
+  </Entry>
+  <Entry>
     <Key>MainMenu</Key>
     <Value>主菜单</Value>
   </Entry>

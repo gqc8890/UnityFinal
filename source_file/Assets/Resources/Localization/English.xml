@@ -16,6 +16,18 @@
     <Value>Quit</Value>
   </Entry>
   <Entry>
+    <Key>Easy</Key>
+    <Value>Easy</Value>
+  </Entry>
+  <Entry>
+    <Key>Normal</Key>
+    <Value>Normal</Value>
+  </Entry>
+  <Entry>
+    <Key>Hard</Key>
+    <Value>Hard</Value>
+  </Entry>
+  <Entry>
     <Key>MainMenu</Key>
     <Value>MainMenu</Value>
   </Entry>

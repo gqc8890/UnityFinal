@@ -16,7 +16,7 @@ public class MainMenuLogic : MonoBehaviour
     {
         Debug.Log("Clicked Start");
         //SceneManager.LoadScene("LoadScene");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("DiffSelect");
     }
 
     public void OnOptionsClicked()

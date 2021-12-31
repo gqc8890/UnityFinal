@@ -9,6 +9,7 @@ public class SaveManager : MonoBehaviour
 
     BatteryLogic[] m_batteryLogic;
     PlayerMovement m_playmovement;
+    NewEnemy m_enemy;
     FlashLightLogic m_flashlogic;
 
 
@@ -30,6 +31,7 @@ public class SaveManager : MonoBehaviour
         m_batteryLogic = FindObjectsOfType<BatteryLogic>();
         m_playmovement = FindObjectOfType<PlayerMovement>();
         m_flashlogic = FindObjectOfType<FlashLightLogic>();
+        m_enemy = FindObjectOfType<NewEnemy>();
     }
 
     // Update is called once per frame
@@ -53,7 +55,8 @@ public class SaveManager : MonoBehaviour
     {
         m_playmovement.Save();
         m_flashlogic.Save();
-        for(int index = 0; index < m_batteryLogic.Length; ++index)
+        m_enemy.Save();
+        for (int index = 0; index < m_batteryLogic.Length; ++index)
         {
             if(m_batteryLogic[index]){
                 m_batteryLogic[index].Save(index);
@@ -67,6 +70,8 @@ public class SaveManager : MonoBehaviour
     {
         m_playmovement.Load();
         m_flashlogic.Load();
+        m_enemy.Load();
+
         for (int index = 0; index < m_batteryLogic.Length; ++index)
         {
             if(m_batteryLogic[index]){

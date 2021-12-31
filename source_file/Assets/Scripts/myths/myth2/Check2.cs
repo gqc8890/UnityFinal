@@ -11,12 +11,14 @@ public class Check2 : MonoBehaviour
 
     TriggerLogic2[] triggers;
     AudioforMyth2 m_audio;
-    
+    SaveManager m_save;
+
     // Start is called before the first frame update
     void Start()
     {
         m_audio = FindObjectOfType<AudioforMyth2>();
         triggers = FindObjectsOfType<TriggerLogic2>();
+        m_save = FindObjectOfType<SaveManager>();
     }
 
     // Update is called once per frame
@@ -54,5 +56,6 @@ public class Check2 : MonoBehaviour
     void destroy_door()
     {
         gameObject.SetActive(false);
+        // m_save.Save1();
     }
 }

@@ -15,6 +15,7 @@ public class GameEnding : MonoBehaviour
     bool m_IsPlayerCaught;
     float m_Timer;
     bool m_HasAudioPlayed;
+    SaveManager m_save;
     
     void OnTriggerEnter (Collider other)
     {
@@ -27,6 +28,10 @@ public class GameEnding : MonoBehaviour
     public void CaughtPlayer ()
     {
         m_IsPlayerCaught = true;
+    }
+    void Start()
+    {
+        m_save = FindObjectOfType<SaveManager>();
     }
 
     void Update ()
@@ -43,26 +48,33 @@ public class GameEnding : MonoBehaviour
 
     void EndLevel (CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
+        
         if (!m_HasAudioPlayed)
         {
             audioSource.Play();
             m_HasAudioPlayed = true;
         }
-            
+
         m_Timer += Time.deltaTime;
         imageCanvasGroup.alpha = m_Timer / fadeDuration;
-
         if (m_Timer > fadeDuration + displayImageDuration)
         {
             if (doRestart)
             {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene (0);
+                m_Timer = 0;
+                m_HasAudioPlayed = false;
+                imageCanvasGroup.alpha = 0;
+                m_save.Load1();
+                m_IsPlayerCaught = false;
+                return;
+                //Cursor.visible = true;
+                //Cursor.lockState = CursorLockMode.None;
+                //SceneManager.LoadScene (0);
             }
             else
             {
-                Application.Quit ();
+                SceneManager.LoadScene(0);
+                //Application.Quit ();
             }
         }
     }

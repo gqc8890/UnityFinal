@@ -334,8 +334,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5576632978155655146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008773804, y: -0.6149993, z: -0.85206556}
-  m_LocalScale: {x: 0.34307253, y: 3.0815914, z: 3.518005}
+  m_LocalPosition: {x: -0.098, y: -0.784, z: -0.85206556}
+  m_LocalScale: {x: 0.34307253, y: 3.0815914, z: 3.6199725}
   m_Children:
   - {fileID: 2329790399322488883}
   - {fileID: 5576632978187576700}
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_door_hit: {fileID: 8300000, guid: 4bfe86e67ca33c1478f5b25c4db47f99, type: 3}
   m_door_break: {fileID: 8300000, guid: 770e66703eb87b94c8b83490f3bd1a8d, type: 3}
-  is_destroyable: 0
+  is_destroyable: 1
 --- !u!82 &5576632978155655148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -817,4 +817,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 5576632978155655146}
-  openaudio: {fileID: 0}
+  openaudio: {fileID: 8300000, guid: 47f4b6b234b123c41ad06310476b8987, type: 3}

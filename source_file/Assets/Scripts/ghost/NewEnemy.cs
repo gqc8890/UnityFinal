@@ -178,6 +178,37 @@ public class NewEnemy : MonoBehaviour {
 	public void born(){
 		gameObject.transform.position=bornpoint.transform.position;
 	}
+
+	public void Save()
+	{
+		PlayerPrefs.SetFloat("EmenyPosX", transform.position.x);
+		PlayerPrefs.SetFloat("EmenyPosY", transform.position.y);
+		PlayerPrefs.SetFloat("EmenyPosZ", transform.position.z);
+		Debug.Log("2333");
+		PlayerPrefs.SetFloat("EmenyRotX", transform.rotation.eulerAngles.x);
+		PlayerPrefs.SetFloat("EmenyRotY", transform.rotation.eulerAngles.y);
+		PlayerPrefs.SetFloat("EmenyRotZ", transform.rotation.eulerAngles.z);
+
+	}
+
+	public void Load()
+	{
+		float emenyPosX = PlayerPrefs.GetFloat("EmenyPosX");
+		float emenyPosY = PlayerPrefs.GetFloat("EmenyPosY");
+		float emenyPosZ = PlayerPrefs.GetFloat("EmenyPosZ");
+
+		float emenyRotX = PlayerPrefs.GetFloat("EmenyRotX");
+		float emenyRotY = PlayerPrefs.GetFloat("EmenyRotY");
+		float emenyRotZ = PlayerPrefs.GetFloat("EmenyRotZ");
+
+
+		//GetComponent<CharacterController>().enabled = false;
+
+		transform.position = new Vector3((float)-22.07, (float)0, (float)- 28.36);
+		transform.rotation = Quaternion.Euler(emenyRotX, emenyRotY, emenyRotZ);
+
+		//GetComponent<CharacterController>().enabled = true;
+	}
 }
 
 

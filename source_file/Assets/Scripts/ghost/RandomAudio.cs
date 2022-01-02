@@ -27,8 +27,8 @@ public class RandomAudio : MonoBehaviour {
  
      void randomPlay()
     {
-        randomNum = Random.Range(1.0f, 6.0f);
-        if (randomNum >= 1.0f && randomNum < 5.0f) { state = 1; audioSource.clip = otherClip1; audioSource.Play(); }
+        randomNum = Random.Range(4.0f, 6.0f);
+        if (randomNum >= 4.0f && randomNum < 5.0f) { state = 1; audioSource.clip = otherClip1; audioSource.Play(); }
         else if (randomNum >= 5.0f && randomNum < 5.2f) { state = 2; audioSource.clip = otherClip2; audioSource.Play(); }
         else if (randomNum >= 5.2f && randomNum <= 5.4f) { state = 3; audioSource.clip = otherClip3; audioSource.Play(); }
         else if (randomNum >= 5.4f && randomNum <= 5.6f) { state = 4; audioSource.clip = otherClip3; audioSource.Play(); }

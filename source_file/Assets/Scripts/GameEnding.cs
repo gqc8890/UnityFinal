@@ -67,12 +67,13 @@ public class GameEnding : MonoBehaviour
                 m_save.Load1();
                 m_IsPlayerCaught = false;
                 return;
-                //Cursor.visible = true;
-                //Cursor.lockState = CursorLockMode.None;
+                
                 //SceneManager.LoadScene (0);
             }
             else
             {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(0);
                 //Application.Quit ();
             }

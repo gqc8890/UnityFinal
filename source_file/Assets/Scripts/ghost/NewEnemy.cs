@@ -202,12 +202,25 @@ public class NewEnemy : MonoBehaviour {
 		float emenyRotZ = PlayerPrefs.GetFloat("EmenyRotZ");
 
 
-		//GetComponent<CharacterController>().enabled = false;
+		GetComponent<NavMeshAgent>().enabled = false;
 
-		transform.position = new Vector3((float)-22.07, (float)0, (float)- 28.36);
+		transform.position = new Vector3(emenyPosX, emenyPosY, emenyPosZ);
 		transform.rotation = Quaternion.Euler(emenyRotX, emenyRotY, emenyRotZ);
+		//Invoke("lo",0.1f);
+		//Invoke("lo",0.2f);
+		GetComponent<NavMeshAgent>().enabled = true;
+	}
 
-		//GetComponent<CharacterController>().enabled = true;
+	public void lo(){
+		float emenyPosX = PlayerPrefs.GetFloat("EmenyPosX");
+		float emenyPosY = PlayerPrefs.GetFloat("EmenyPosY");
+		float emenyPosZ = PlayerPrefs.GetFloat("EmenyPosZ");
+
+		float emenyRotX = PlayerPrefs.GetFloat("EmenyRotX");
+		float emenyRotY = PlayerPrefs.GetFloat("EmenyRotY");
+		float emenyRotZ = PlayerPrefs.GetFloat("EmenyRotZ");
+		transform.position = new Vector3(emenyPosX, emenyPosY, emenyPosZ);
+		transform.rotation = Quaternion.Euler(emenyRotX, emenyRotY, emenyRotZ);
 	}
 }
 

@@ -59,24 +59,24 @@ public class GameEnding : MonoBehaviour
         imageCanvasGroup.alpha = m_Timer / fadeDuration;
         if (m_Timer > fadeDuration + displayImageDuration)
         {
-            if (doRestart)
-            {
-                m_Timer = 0;
-                m_HasAudioPlayed = false;
-                imageCanvasGroup.alpha = 0;
-                m_save.Load1();
-                m_IsPlayerCaught = false;
-                return;
+            // if (doRestart)
+            // {
+            //     m_Timer = 0;
+            //     m_HasAudioPlayed = false;
+            //     imageCanvasGroup.alpha = 0;
+            //     m_save.Load1();
+            //     m_IsPlayerCaught = false;
+            //     return;
                 
-                //SceneManager.LoadScene (0);
-            }
-            else
-            {
+            //     //SceneManager.LoadScene (0);
+            // }
+            // else
+            // {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(0);
                 //Application.Quit ();
-            }
+            //}
         }
     }
 }
